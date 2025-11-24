@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- start of header -->
+    <header>
+      <section class="header-wrapper">
+        <article class="hero-article-text">
+          <h1 class="hero-title">
+            جایی که تولید کننده می سازد و سرمایه گزار رشد می دهد
+          </h1>
+          <p class="hero-paragraph">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است
+          </p>
+        </article>
+        <article class="hero-article-search">
+          <div class="hero-search-wrapper">
+            <input class="hero-search" type="text" placeholder="search" />
+            <button class="search-button"><i class="bi bi-search"></i></button>
+          </div>
+          <h4 class="search-header">جستجو های محبوب:</h4>
+          <div class="search-option-wrapper">
+            <a class="search-option">صنایع دستی</a>
+            <a class="search-option">محتوای آموزشی </a>
+            <a class="search-option">ماشین آلات</a>
+            <a class="search-option">سرگرمی</a>
+            <a class="search-option">دیجیتال</a>
+          </div>
+        </article>
+      </section>
+    </header>
+    <!-- end of header -->
+
+    <!-- start of category -->
+    <section class="section-margin">
+      <h3 class="section-title">دسته بندی <span>ما</span></h3>
+      <article class="category-wrapper">
+        <!-- 1. موبایل و تبلت -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-phone"></i>
+          <div>
+            <p class="category-text">موبایل و تبلت</p>
+            <p class="category-text">45210</p>
+          </div>
+        </a>
+
+        <!-- 2. لپ تاپ و کامپیوتر -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-laptop"></i>
+          <div>
+            <p class="category-text">لپ‌تاپ و کامپیوتر</p>
+            <p class="category-text">7812</p>
+          </div>
+        </a>
+
+        <!-- 3. مد و پوشاک -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-bag"></i>
+          <div>
+            <p class="category-text">مد و پوشاک</p>
+            <p class="category-text">15420</p>
+          </div>
+        </a>
+
+        <!-- 4. لوازم خانگی -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-house-door"></i>
+          <div>
+            <p class="category-text">لوازم خانگی</p>
+            <p class="category-text">22340</p>
+          </div>
+        </a>
+
+        <!-- 5. زیبایی و سلامت -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-heart"></i>
+          <div>
+            <p class="category-text">زیبایی و سلامت</p>
+            <p class="category-text">9870</p>
+          </div>
+        </a>
+
+        <!-- 6. ورزش و سفر -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-bicycle"></i>
+          <div>
+            <p class="category-text">ورزش و سفر</p>
+            <p class="category-text">6320</p>
+          </div>
+        </a>
+
+        <!-- 7. کتاب و لوازم التحریر -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-book"></i>
+          <div>
+            <p class="category-text">کتاب و لوازم‌التحریر</p>
+            <p class="category-text">5400</p>
+          </div>
+        </a>
+
+        <!-- 8. محصولات دیجیتال -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-usb-drive"></i>
+          <div>
+            <p class="category-text">محصولات دیجیتال</p>
+            <p class="category-text">11450</p>
+          </div>
+        </a>
+
+        <!-- 9. اسباب‌بازی و کودک -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-emoji-smile"></i>
+          <div>
+            <p class="category-text">اسباب‌بازی و کودک</p>
+            <p class="category-text">8240</p>
+          </div>
+        </a>
+
+        <!-- 10. ابزار و تجهیزات -->
+        <a href="#" class="category-card">
+          <i class="category-icon bi bi-hammer"></i>
+          <div>
+            <p class="category-text">ابزار و تجهیزات</p>
+            <p class="category-text">3920</p>
+          </div>
+        </a>
+      </article>
+    </section>
+
+    <!-- end of category -->
+
+    <!-- start of product menu -->
+    <section>
+      <h3 class="section-title">منو <span>محصولات </span></h3>
+      <article>
+        <div class="product-menu-wrapper" x-data="{ tab : 1 }">
+          <div class="product-menu-button-wrapper">
+            <button @click="tab = 11" :class="tab === 11 ? 'product-menu-button-active' : '' " class="product-menu-button">
+              صنایع دستی
+            </button>
+            <button @click="tab=1" :class="tab === 1 ? 'product-menu-button-active' : '' " class="product-menu-button">موبایل و تبلت</button>
+            <button @click="tab=2" :class="tab === 2 ? 'product-menu-button-active' : '' " class="product-menu-button">لپ‌تاپ و کامپیوتر</button>
+            <button @click="tab=3" :class="tab === 3 ? 'product-menu-button-active' : '' " class="product-menu-button">مد و پوشاک</button>
+            <button @click="tab=4" :class="tab === 4 ? 'product-menu-button-active' : '' " class="product-menu-button">لوازم خانگی</button>
+            <button @click="tab=5" :class="tab === 5 ? 'product-menu-button-active' : '' " class="product-menu-button">زیبایی و سلامت</button>
+            <button @click="tab=6" :class="tab === 6 ? 'product-menu-button-active' : '' " class="product-menu-button">ورزش و سفر</button>
+            <button @click="tab=7" :class="tab === 7 ? 'product-menu-button-active' : '' " class="product-menu-button">کتاب و لوازم‌التحریر</button>
+            <button @click="tab=8" :class="tab === 8 ? 'product-menu-button-active' : '' " class="product-menu-button">محصولات دیجیتال</button>
+            <button @click="tab=9" :class="tab === 9 ? 'product-menu-button-active' : '' " class="product-menu-button">اسباب‌بازی و کودک</button>
+            <button @click="tab=10" :class="tab === 10 ? 'product-menu-button-active' : '' " class="product-menu-button">ابزار و تجهیزات</button>
+          </div>
+        
+          <div class="product-menu-card-wrapper" x-show="tab === 1">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/2.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/3.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 2">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 3">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/2.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/3.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 4">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/3.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/2.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 5">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/2.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/3.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 6">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/3.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 7">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/3.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 8">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/2.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 9">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/2.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 10">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/2.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-menu-card-wrapper" x-show="tab === 11">
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/2.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/1.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/4.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-menu-card">
+              <div>
+                <img class="product-menu-image" loading="lazy" src="./images/5.jpg" alt="" />
+              </div>
+              <div class="product-menu-text">
+                <h4>برگر مخصوص</h4>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="product-menu-footer">
+                  <div class="product-menu-footer-price">
+                    <span>20000</span>
+                    <span>25%</span>
+                    <del class="deleted-price">30000</del>
+                  </div>
+                  <div class="product-menu-icon">
+                    <span><i class="bi bi-cart"></i></span>
+                    <span><i class="bi bi-heart"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- end of product menu -->
+  </body>
+</html>
